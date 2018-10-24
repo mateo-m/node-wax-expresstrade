@@ -144,7 +144,7 @@ class ITrade extends ETInterface {
       throw new Error('token not specified!')
     }
 
-    if (items_to_send === undefined || items_to_receive === undefined) {
+    if (items_to_send === undefined && items_to_receive === undefined) {
       throw new Error('items_to_send or items_to_receive not specified!')
     }
 
@@ -165,7 +165,7 @@ class ITrade extends ETInterface {
       throw new Error('steamId not specified!')
     }
 
-    if (items_to_send === undefined || items_to_receive === undefined) {
+    if (items_to_send === undefined && items_to_receive === undefined) {
       throw new Error('items_to_send or items_to_receive not specified!')
     }
 
