@@ -34,10 +34,11 @@ class IItem extends ETInterface {
     return res.response
   }
 
-  async GetItems({ skuFilter }) {
+  async GetItems({ skuFilter, wearTierIndex }) {
     const url = this.getUrl() + 'GetItems/v1'
-
-    const res = await this.request.get({ url, qs: { sku_filter: skuFilter } })
+    const form = { sku_filter: skuFilter, wear_tier_index: wearTierIndex }
+    
+    const res = await this.request.post({ url, form })
 
     if (!res.response) {
       throw new Error(res.message)
