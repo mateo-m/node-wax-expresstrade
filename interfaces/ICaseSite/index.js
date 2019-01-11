@@ -42,10 +42,6 @@ class ICaseSite extends ETInterface {
       throw new Error('caseId not specified!')
     }
 
-    if (affiliateEthAddress === undefined) {
-      throw new Error('affiliateEthAddress not specified!')
-    }
-
     const url = this.getUrl() + 'SendKeyRequest/v1'
     const form = { trade_url: tradeUrl, steam_id: steamId, case_id: caseId, affiliate_eth_address: affiliateEthAddress, amount }
 
